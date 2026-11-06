@@ -1,0 +1,17 @@
+CARA PASANG (dari root project sipustaka_hmvc)
+
+1. Pastikan modul sudah dibuat:
+   php artisan module:make Buku Peminjaman UserManagement
+2. Ekstrak zip ini ke root project, pilih "Replace / Timpa" semua file.
+   (bootstrap/app.php ikut tertimpa: sudah berisi alias middleware 'role'.
+    Jika project Anda punya konfigurasi tambahan di file itu, cadangkan dulu.)
+3. Jalankan:
+   composer dump-autoload
+   php artisan migrate
+   php artisan storage:link
+   php artisan route:list
+   php artisan serve
+
+Akun uji (dari seeder Langkah 2):
+   admin@sipustaka.test / password123
+   user@sipustaka.test  / password123
